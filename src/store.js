@@ -43,3 +43,19 @@ function reducer(state = initialState, action) {
 }
 
 const store = createStore(reducer);
+
+function deposit(amount) {
+	return { type: "account/deposit", payload: amount };
+}
+
+function withdraw(amount) {
+	return { type: "account/withdraw", payload: amount };
+}
+
+function payLoan() {
+	return { type: "account/repayLoan" };
+}
+
+function requestLoan(amount, purpose) {
+	return { type: "account/requestLoan", payloan: { amount, purpose } };
+}
