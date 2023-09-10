@@ -55,5 +55,5 @@ export function payLoan() {
 }
 
 export function requestLoan(amount, purpose) {
-	return { type: "account/requestLoan", payloan: { amount, purpose } };
+	return { type: "account/requestLoan", payload: { amount, purpose } };
 }
